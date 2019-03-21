@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="category">Category</label>
+        <input type="text" name="category"><br>
+
+        <label for="title">Title</label>
+        <input type="text" name=title"><br>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Write something..." style="height:200px"></textarea>
+
+        <label for="image">Select image</label>
+        <input type="file" name="image" accept="image/*"><br>
+
+        <div id="map" style="width: 500px; height: 400px;"></div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+<script src="js/map.js"></script>
+</html>
