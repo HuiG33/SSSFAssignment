@@ -79,6 +79,7 @@ app.use('/upload', (req, res, next) => {
 
 app.use('/upload', (req, res, next) => {
   console.log(req.body.latitude);
+  console.log(req.body.longitude);
   console.log(req.file.path);
 
   const obj = {
@@ -88,8 +89,8 @@ app.use('/upload', (req, res, next) => {
     image: req.file.path,
     thumbNail: req.file.destination + 'thumbnails/' + 'thumbnail-' + req.file.filename,
     coordinates: {
-      latitude: 1,
-      longitude: 1,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
     }
   };
 

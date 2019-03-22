@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv-extended": "^2.4.0",
+    "eslint": "^5.15.3",
     "express": "^4.16.4",
     "jsonfile": "^5.0.0",
     "mongoose": "^5.4.19",
