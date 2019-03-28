@@ -61,3 +61,7 @@ typings/
 .next
 
 .idea/
+
+ssl-key.pem
+ssl-cert.pem
+certrequest.csr

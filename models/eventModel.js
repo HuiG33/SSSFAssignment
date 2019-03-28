@@ -12,4 +12,4 @@ const eventSchema = new Schema({
     longitude: String
   }
 });
-module.exports = eventSchema;
+module.exports = mongoose.model('Event', eventSchema);
