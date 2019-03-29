@@ -10,8 +10,8 @@ exports.event_list_get = () => {
   });
 };
 
-exports.event_list_sorted = (params) => {
-  return Event.find({ category: params}).then((all) => {
+exports.event_list_sorted = (params, title) => {
+  return Event.find({ category: params}).where('title').equals(title).then((all) => {
     return all;
   }).catch((err) => {
     return err;

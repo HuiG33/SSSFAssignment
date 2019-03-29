@@ -24,13 +24,14 @@ router.get('/all', (req, res) => {
   });
 });
 
-router.get('/events/:param1', (req, res) => {
-  eventController.event_list_sorted(req.params.param1).then((result) => {
+router.post('/events/:param1', (req, res) => {
+  eventController.event_list_sorted(req.params.param1, req.body.title).then((result) => {
     res.send(result);
   });
 });
 
 router.post('/upload', upload.single('image'),(req, res, next) => {
+  console.log(req.body);
   req.body.image = req.file.path;
   req.body.thumbNail = req.file.destination + 'thumbnails/' + 'thumbnail-' + req.file.filename;
 
